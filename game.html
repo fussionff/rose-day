@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rose Love Game</title>
+<style>
+body{
+    background:#ffe6e6;
+    font-family:Arial;
+    text-align:center;
+    padding-top:50px;
+}
+.rose{
+    font-size:80px;
+    cursor:pointer;
+}
+.score{
+    font-size:22px;
+    margin:20px;
+}
+.fall {
+    position: fixed;
+    top: -10%;
+    font-size: 24px;
+    animation: fall 6s linear infinite;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+</style>
+</head>
+<body>
+<!-- Falling Hearts & Roses -->
+<div class="fall" style="left:5%; animation-delay:0s;">❤️</div>
+<div class="fall" style="left:15%; animation-delay:2s;">🌹</div>
+<div class="fall" style="left:25%; animation-delay:4s;">💖</div>
+<div class="fall" style="left:35%; animation-delay:1s;">🌹</div>
+<div class="fall" style="left:45%; animation-delay:3s;">❤️</div>
+<div class="fall" style="left:55%; animation-delay:5s;">💘</div>
+<div class="fall" style="left:65%; animation-delay:2s;">🌹</div>
+<div class="fall" style="left:75%; animation-delay:4s;">❤️</div>
+<div class="fall" style="left:85%; animation-delay:1s;">💖</div>
+
+<h1>🌹 Click the Rose for Love 🌹</h1>
+<p class="score">Love Points: <span id="score">0</span></p>
+
+<div class="rose" onclick="addLove()">🌹</div>
+
+<p id="msg"></p>
+
+<a href="index.html">⬅ Back</a>
+
+<script>
+let score = 0;
+function addLove(){
+    score++;
+    document.getElementById("score").innerText = score;
+
+    if(score == 5){
+        document.getElementById("msg").innerText =
+        "Deepa, you are my forever love ❤️<br>"+
+        "deepa ma tumsa really had sa jaida pyar karta hu🌹🌹<br>" +
+        "I love you mera pyara sa bacha 🌹🌹❤️❤️❤️";
+    }
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<title>Rose Love Game</title>
+<style>
+body{
+    background:#ffe6e6;
+    font-family:Arial;
+    text-align:center;
+    padding-top:50px;
+}
+.rose{
+    font-size:80px;
+    cursor:pointer;
+}
+.score{
+    font-size:22px;
+    margin:20px;
+}
+</style>
+</head>
+<body>
+
+<h1>🌹 Click the Rose for Love 🌹</h1>
+<p class="score">Love Points: <span id="score">0</span></p>
+
+<div class="rose" onclick="addLove()">🌹</div>
+
+<p id="msg"></p>
+
+<a href="index.html">⬅ Back</a>
+
+<script>
+let score = 0;
+function addLove(){
+    score++;
+    document.getElementById("score").innerText = score;
+
+    if(score == 5){
+        document.getElementById("msg").innerText =
+        "Deepa, you are my forever love ❤️";
+    }
+}
+</script>
+
+</body>
+</html>
